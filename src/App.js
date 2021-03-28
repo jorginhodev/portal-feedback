@@ -1,5 +1,10 @@
+import GlobalStyle from './styles/global';
+
 const App = () => (
-  <h1>Starting Project</h1>
+  <>
+    <GlobalStyle />
+    <h1>Starting Project</h1>
+  </>
 );
 
 export default App;
