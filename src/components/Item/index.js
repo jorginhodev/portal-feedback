@@ -5,8 +5,9 @@ const Item = ({
   name,
   company,
   role,
+  id,
 }) => (
-  <S.Container>
+  <S.Container to={id}>
     <h2>{name}</h2>
     <p>{company}</p>
     <p>{role}</p>

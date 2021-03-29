@@ -44,6 +44,7 @@ const List = () => {
             company={collaborator.company}
             role={collaborator.role}
             avatar={collaborator.avatar}
+            id={collaborator.id}
           />
         ))}
       </S.Content>
