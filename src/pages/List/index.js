@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
 
-import Item from '../Item';
+import Item from '../../components/Item';
 
 import * as S from './styles';
 
