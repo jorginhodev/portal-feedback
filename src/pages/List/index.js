@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
+import paginate from '../../utils/paginate';
 
 import Item from '../../components/Item';
 
@@ -12,17 +13,11 @@ const List = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const limit = 10;
 
-  const splitData = (items, max) => items.reduce((accumulator, item, index) => {
-    const group = Math.floor(index / max);
-    accumulator[group] = [...(accumulator[group] || []), item];
-    return accumulator;
-  }, []);
-
   useEffect(() => {
     api.get('/').then(({ data }) => {
       setTotalPage(Math.ceil(data.length / limit));
       setListCollaborator(data.slice(0, limit));
-      setTotalData(splitData(data, limit));
+      setTotalData(paginate(data, limit));
     });
   }, []);
 

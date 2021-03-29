@@ -25,6 +25,7 @@ export const Actions = styled.div`
     border-radius: 10px;
     color: var(--shape);
     transition: 0.3s;
+    outline: none;
 
     &:nth-of-type(1) {
       background: var(--red);
